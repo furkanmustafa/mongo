@@ -318,8 +318,8 @@ namespace mongo {
 
     SockAddr unknownAddress( "0.0.0.0", 0 );
 
-    string makeUnixSockPath(int port) {
-        return mongoutils::str::stream() << cmdLine.socket << "/mongodb-" << port << ".sock";
+    string makeUnixSockPath() {
+        return mongoutils::str::stream() << cmdLine.socket;
     }
 
 

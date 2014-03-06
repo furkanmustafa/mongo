@@ -66,10 +66,10 @@ namespace mongo {
         Listener::globalTicketHolder.resize( cmdLine.maxConns );
 
 #ifndef _WIN32
-        if (!fs::is_directory(cmdLine.socket)) {
-            cout << cmdLine.socket << " must be a directory" << endl;
-            return false;
-        }
+        // if (!fs::is_directory(cmdLine.socket)) {
+        //     cout << cmdLine.socket << " must be a directory" << endl;
+        //     return false;
+        // }
 
         if (cmdLine.doFork) {
             fassert(16447, !cmdLine.logpath.empty() || cmdLine.logWithSyslog);

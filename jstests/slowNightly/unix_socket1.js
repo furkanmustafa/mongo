@@ -15,7 +15,7 @@ if ( ! _isWindows() ) {
     var ports = allocatePorts(1);
     var path = "/data/db/sockpath";
     
-    var conn = new MongodRunner(ports[0], path, null, null, ["--unixSocketPrefix", path]);
+    var conn = new MongodRunner(ports[0], path, null, null, ["--unixSocket", path]);
     conn.start();
     
     var sock2 = new Mongo(path+"/mongodb-"+ports[0]+".sock");

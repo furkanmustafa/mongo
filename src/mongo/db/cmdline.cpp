@@ -87,7 +87,7 @@ namespace {
                 "Set a configurable parameter")
 #ifndef _WIN32
         ("nounixsocket", "disable listening on unix sockets")
-        ("unixSocketPrefix", po::value<string>(), "alternative directory for UNIX domain sockets (defaults to /tmp)")
+        ("unixSocket", po::value<string>(), "alternative directory for UNIX domain sockets (defaults to /tmp)")
         ("fork" , "fork server process" )
         ("syslog" , "log to system's syslog facility instead of file or stdout" )
 #endif
@@ -343,8 +343,8 @@ namespace {
         }
 
 #ifndef _WIN32
-        if (params.count("unixSocketPrefix")) {
-            cmdLine.socket = params["unixSocketPrefix"].as<string>();
+        if (params.count("unixSocket")) {
+            cmdLine.socket = params["unixSocket"].as<string>();
         }
 
         if (params.count("nounixsocket")) {

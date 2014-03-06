@@ -67,7 +67,7 @@ namespace mongo {
 
 #endif // _WIN32
 
-    string makeUnixSockPath(int port);
+    string makeUnixSockPath();
 
     // If an ip address is passed in, just return that.  If a hostname is passed
     // in, look up its ip and return that.  Returns "" on failure.
