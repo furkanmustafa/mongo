@@ -1105,7 +1105,7 @@ static void processCommandLineOptions(const std::vector<std::string>& argv) {
             }
         }
         else {
-            if ( cmdLine.port <= 0 || cmdLine.port > 65535 ) {
+            if ( cmdLine.port < 0 || cmdLine.port > 65535 ) {
                 out() << "bad --port number" << endl;
                 dbexit( EXIT_BADOPTIONS );
             }
