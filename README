@@ -1,3 +1,12 @@
+
+NOTE : This Fork is for achieving these objectives;
+  - Set port to 0 to disable ip networking (having mongo only working with unix socket)
+  - unixSocket instead of unixSocketPath and letting mongo decide the filename
+
+Not sure if it's gonna break something, looks kinda safe though.
+
+---
+
 MongoDB README
 
 Welcome to MongoDB!
